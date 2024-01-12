@@ -1,19 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
 
-body {
-    padding: 0px;
+body{
     margin: 0px;
+    font-family: 'Roboto',sans-serif;
 }
 
 main {
     display: grid;
-    grid-column: repeat(auto-fit, minmax(200px,300px));
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
+    grid-template: 1fr  / 1fr 0.5fr;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: #F4F4ED;
+    overflow: hidden;
 }
 
-.card {
+.container {
+    width: 60dvw;
+    height: 70%;
     border-radius: 1rem;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    padding: 0.5rem;
+    position: relative;
+}
+
+#addBook,
+.container {
+    background-image: linear-gradient(45deg,#8093F1,#B388EB,#F7AEF8);
+}
+
+#addBook {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    border: 0px;
+    justify-self: center;
+    position: absolute;
+    bottom: -80px;
+}
+.card {
     padding:0.5rem;
+    background-color: #e4e4dd;
+    width: fit-content;
+    height: 30%;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    position: relative;
+}
+
+.sidebar {
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    width: 20dvw;
+    height: 100%;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    background-image: linear-gradient(45deg,#8093F1,#72DDF7);
+    justify-self: end;
+    position: relative;
+    left: 100%;
+    transition: left 0.3s ease;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    padding: 0rem 1rem;
+    text-align: center;
+}
+
+@keyframes materialize {
+    from {
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+.materialize-animation {
+    animation: 0.5s ease 1 materialize;
+}
+
+
+/* 
+*hacer que las cards sean flex containers
+*terminar el formulario de la sidebar
+*/
+
+
+/* 
+para la animacion del click en el icono de leido hacer que el fondo de su contenedor se vuelva verde y que
+el atributo fill del svg sea del color del fondo (casi blanco).
+*/
+.iconHolder {
+    display: flex;
+    gap: 0.3rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+#readIconContainer,
+#deleteIconContainer {
+    height: 25px;
+    width: 25px;
+}
+
+#readIconContainer:hover,
+#deleteIconContainer:hover{
+    cursor: pointer;
+}
+
+
+#addButton:hover {
+
 }
