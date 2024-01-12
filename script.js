@@ -14,3 +14,13 @@ function showBooks () {
     })
 }
 
+let addButton = document.getElementById("addBook");
+let sidebar = document.getElementsByClassName("sidebar")[0];
+
+addButton.addEventListener('click', function () {
+    console.log(sidebar);
+    sidebar.style['left'] = (sidebar.style.left !== '0px') ? "0px" : "0px";
+    sidebar.classList.toggle('materialize-animation');
+})
+
+
