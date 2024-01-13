@@ -29,7 +29,23 @@
         <div class="sidebar">
             <h2>Details</h2>
             <form action="">
-
+                <fieldset>
+                    <label for="bookName">Book</label>
+                    <input type="text" id="bookName" name="name" pattern="[a-zA-Z]+" minlength="5" maxlength="25" required >
+                </fieldset>
+                <fieldset>
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" pattern="[a-zA-Z]+" minlength="5" maxlength="25" required >
+                </fieldset>
+                <fieldset>
+                    <label for="pages">Pages</label>
+                    <input type="text" id="pages" name="pages" pattern="\d+" minlength="2" maxlength="4" required >
+                </fieldset>
+                <fieldset>
+                    <input type="checkbox" id="read" name="isRead" required >
+                    <label for="read">Have you read the book?</label>
+                </fieldset>
+                <button type="button">Add</button>
             </form>
         </div>
     </main>
