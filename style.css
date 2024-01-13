@@ -113,3 +113,46 @@ el atributo fill del svg sea del color del fondo (casi blanco).
 #addButton:hover {
 
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 50%;
+    justify-content: space-around;
+    bottom: -7rem;
+}
+
+form label {
+    align-self: flex-start;
+}
+
+form button {
+    align-self: center;
+    border: none;
+    width: 30%;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+form input {
+    outline: none;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+form fieldset {
+    border: none;
+}
+
+form fieldset:not(:nth-child(4)){
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset label:not(:last-child){
+    position: relative;
+    bottom: 0.3rem;
+    left: 0.3rem;
+}
